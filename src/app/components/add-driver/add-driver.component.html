@@ -1,0 +1,102 @@
+<section class="mx-auto w-50 shadow my-5">
+  <h1>ADD DRIVER</h1>
+
+  <form [formGroup]="registersForm" (ngSubmit)="sendForm()">
+    <div class="form-item">
+      <label for="name">name</label>
+      <input formControlName="name" type="text" class="form-control" id="name">
+      <div *ngIf="registersForm.get('name')?.errors && registersForm.get('name')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('name')?.getError('required')">Name is Required</p>
+        <p class="mb-0" *ngIf="registersForm.get('name')?.getError('minlength')">Name MinLength 3</p>
+        <p class="mb-0" *ngIf="registersForm.get('name')?.getError('maxlength')">Name MaxLength 20</p>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <label for="email">email</label>
+      <input formControlName="email" type="email" class="form-control" id="email">
+      <div *ngIf="registersForm.get('email')?.errors && registersForm.get('email')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('email')?.getError('required')">email is Required</p>
+        <p class="mb-0" *ngIf="registersForm.get('email')?.getError('email')">invalid format</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="password">password</label>
+      <input formControlName="password" type="password" required pattern="^[a-zA-Z][0-9a-zA-Z]{5,8}$"
+        class="form-control" id="password">
+      <div *ngIf="registersForm.get('password')?.errors && registersForm.get('password')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('password')?.getError('required')">password is Required</p>
+        <p class="mb-0" *ngIf="registersForm.get('password')?.getError('pattern')">
+          must be<br>
+          * Start with a letter (either uppercase or lowercase).<br>
+          * Be between 6 and 9 characters in total.<br>
+          * Can only contain letters (A-Z or a-z) and numbers (0-9)</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="address">address</label>
+      <input formControlName="address" type="text" class="form-control" id="address">
+      <div *ngIf="registersForm.get('address')?.errors && registersForm.get('address')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('address')?.getError('required')">address is Required</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="phone">phone</label>
+      <input formControlName="phone" type="tel" class="form-control" id="phone">
+      <div *ngIf="registersForm.get('phone')?.errors && registersForm.get('phone')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('phone')?.getError('required')">phone is Required</p>
+        <p class="mb-0" *ngIf="registersForm.get('phone')?.getError('pattern')">accept only egypt phone number</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="salary">salary</label>
+      <input formControlName="salary" type="number" class="form-control" id="salary">
+      <div *ngIf="registersForm.get('salary')?.errors && registersForm.get('salary')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('salary')?.getError('required')">salary is Required</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="img">img</label>
+      <input formControlName="img" type="file" class="form-control" id="img">
+      <div *ngIf="registersForm.get('img')?.errors && registersForm.get('img')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('img')?.getError('required')">img is Required</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="adminID">adminID</label>
+      <input formControlName="adminID" type="number" class="form-control" id="adminID">
+      <div *ngIf="registersForm.get('adminID')?.errors && registersForm.get('adminID')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('adminID')?.getError('required')">adminID is Required</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="compID">compID</label>
+      <input formControlName="compID" type="number" class="form-control" id="compID">
+      <div *ngIf="registersForm.get('compID')?.errors && registersForm.get('compID')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('compID')?.getError('required')">compID is Required</p>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="mgrID">mgrID</label>
+      <input formControlName="mgrID" type="number" class="form-control" id="mgrID">
+      <div *ngIf="registersForm.get('mgrID')?.errors && registersForm.get('mgrID')?.touched"
+        class="alert alert-danger p-1 small w-75 mx-auto">
+        <p class="mb-0" *ngIf="registersForm.get('mgrID')?.getError('required')">mgrID is Required</p>
+      </div>
+    </div>
+    <button class="main-btn mt-2">Register
+      <!-- <span> <i *ngIf="isLoading" class="fas fa-spin fa-spinner"></i></span> -->
+    </button>
+
+  </form>
+
+</section>

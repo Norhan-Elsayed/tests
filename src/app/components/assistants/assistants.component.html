@@ -1,0 +1,152 @@
+
+<app-nav></app-nav>
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-lg-3 col-md-6  p-2">
+            <div class="bg-light rounded-5 shadow">
+                <div class="row">
+                    <div class="col-7 mt-5">
+                        <h4 class="ps-3 mt-4">230</h4>
+                        <p class="small ps-3 ">Active People</p>
+                        <p class="small  fw-lighter ps-3">Increse since last quarter</p>
+                    </div>
+                    <div class="col-5">
+
+                        <div class="box">
+                            <svg>
+                                <circle cx="70" cy="70" r="50" class="color1"></circle>
+                            </svg>
+                            <div class="counter">
+                                <span class="coloe1">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-2">
+            <div class="bg-light rounded-5 shadow">
+                <div class="row">
+                    <div class="col-7 mt-5">
+                        <h4 class="ps-3  mt-4">660</h4>
+                        <p class="small ps-3">Applied People</p>
+                        <p class="small fw-lighter ps-3">Increse since last quarter</p>
+                    </div>
+                    <div class="col-5">
+
+                        <div class="box2">
+                            <svg>
+                                <circle cx="70" cy="70" r="50" class="color1"></circle>
+                            </svg>
+                            <div class="counter">
+                                <span class="coloe1">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-2">
+            <div class="bg-light rounded-5 shadow">
+                <div class="row">
+                    <div class="col-7 mt-5">
+                        <h4 class="ps-3  mt-4">530</h4>
+                        <p class="small ps-3">Reviewed People</p>
+                        <p class="small fw-lighter ps-3">Increse since last quarter</p>
+                    </div>
+                    <div class="col-5">
+
+                        <div class="box3">
+                            <svg>
+                                <circle cx="70" cy="70" r="50" class="color1"></circle>
+                            </svg>
+                            <div class="counter">
+                                <span class="coloe1">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-2">
+            <div class="bg-light rounded-5 shadow">
+                <div class="row">
+                    <div class="col-7 mt-5">
+                        <h4 class="ps-3  mt-4">130</h4>
+                        <p class="small ps-3">Hired People</p>
+                        <p class="small fw-lighter ps-3">Increse since last quarter</p>
+                    </div>
+                    <div class="col-5">
+
+                        <div class="box4">
+                            <svg>
+                                <circle cx="70" cy="70" r="50" class="color1"></circle>
+                            </svg>
+                            <div class="counter">
+                                <span class="coloe1">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- /////// -->
+<div class="container mt-5 pt-5">
+    <div class="row ">
+     <div class="col-md-7 d-flex">
+         <input [(ngModel)]="term" type="search" placeholder="Type to search By Name..." class="form-control search shadow-none border-0 w-50 ">
+         <button class="btn btn-success ms-2">Search</button>
+     </div>
+     <div class="col-md-5 ">
+         <div class="d-flex justify-content-end ">
+             <button class=" btn add text-white"><i class="fa-plus"></i> Add New People..</button>
+         <button class=" btn delete text-white mx-2"><i class="fa-solid fa-trash"></i> Delete</button>
+         <!-- <button class=" btn edit text-white "><i class="fa-solid fa-pen"></i> Edit</button> -->
+         </div>
+     </div>
+    </div>
+ </div>
+ <!-- /////////// -->
+ <div class="container mt-5  pb-4">
+    <h3 class="">Assistants</h3>
+    <table class="table shadow ">
+        <thead>
+            <tr class="text-center">
+                <th>#</th> 
+                <th>#</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <!-- <th>Helth State</th> -->
+            </tr>
+        </thead>
+        <Tbody>
+            <tr (click)="assistInfo(assistant.id)" class="text-center " *ngFor="let assistant of assistants|search:term "> 
+    
+                <td>
+                    <input type="checkbox" class="form-check mt-2 ms-4"/>
+                </td>
+                <td class="">
+                        <img [src]="assistant.img" class="rounded-circle" width="40" height="40" alt="assistant">
+                </td>
+                <td><p class="pt-2 ">{{assistant.name}}</p></td>
+                <td class=""><p class="mt-2">{{assistant.id}}</p></td>
+                <td class=""><p class="mt-2">{{assistant.email}}</p></td>
+                <td><p class="mt-2">{{assistant.phone}}</p></td>
+                <!-- <td>
+                    <div class="progress mt-2" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar " style="width: 70%">7</div>
+                      </div>
+                </td> -->
+            </tr>
+          
+        </Tbody>
+    
+    </table>
+    </div>

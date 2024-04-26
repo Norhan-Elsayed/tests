@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Righteous&display=swap');
+
+
+
+$font-family:"Encode Sans Expanded", sans-serif;
+$background:rgb(239, 239, 239);
+$main-color:#4289BA;
+body{
+font-family: $font-family;
+background-color: $background;
+
+}
+.btn{
+    background-color: $main-color !important;
+}
+.pointer{
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: $background;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color:$main-color;
+      border-radius: 50px;
+      box-shadow: 0 0 20px 50px $main-color ;
+      border-radius: 2px;
+    }

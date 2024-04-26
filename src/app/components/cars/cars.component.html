@@ -1,0 +1,144 @@
+
+<app-nav></app-nav>
+<!-- top -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4   py-5 ">
+            <div class="p-2 shadow bg-light rounded-4">
+                <div class="container ms-5 py-3">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-5">
+                            <h3 class="mt-2">2350</h3>
+                            <p class="mt-2  all">All Vichles</p>
+
+                        </div>
+                        <div class="col-6 ">
+
+                            <i class="fa-solid fa-check-double rounded-circle top-icon1 bg-danger p-4 fs-1"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4  py-5">
+            <div class="p-2 shadow bg-light rounded-4">
+                <div class="container ms-5 py-3">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-5">
+                            <h3 class="mt-2">650</h3>
+
+                            <p class="mt-2 cars">CARS</p>
+                        </div>
+                        <div class="col-6 ">
+
+                            <i class="fa-solid fa-car rounded-circle top-icon2 p-4 fs-1"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4   py-5">
+            <div class="p-2 shadow bg-light rounded-4">
+                <div class="container ms-5 py-3">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-5">
+                            <h3 class="mt-2">1700</h3>
+
+                            <p class="mt-2 vans">Heavy Vichles</p>
+                        </div>
+                        <div class="col-6 ">
+                            <i class="fa-solid fa-truck-moving rounded-circle bg-danger top-icon3 p-4 fs-1"></i>
+                            <!-- <i class="fa-solid fa-car rounded-circle bg-danger p-4 fs-1"></i> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- middle -->
+<div class="container">
+    <div class="container mt-3 pt-5">
+        <div class="row ">
+            <div class="col-md-7 ">
+                <input [(ngModel)]="term" type="search" placeholder="Type to search..."
+                    class="form-control search shadow-none border-0 w-50 ">
+                <br>
+                <select class="form-select w-50 shadow-none border-0" aria-label="Default select example">
+                    <option selected>Filter by</option>
+                    <option value="1">ID</option>
+                    <option value="2">Name</option>
+                    <option value="3">Helth State</option>
+                    <option value="4">Service Date</option>
+                    <option value="5">Maintainance Date</option>
+                </select>
+
+
+            </div>
+            <div class="col-md-5 ">
+                <div class="d-flex justify-content-end ">
+                    <button class=" btn add text-white"><i class="fa-plus"></i> Add New People..</button>
+                    <button class=" btn delete text-white mx-2"><i class="fa-solid fa-trash"></i> Delete</button>
+                    <!-- <button class=" btn edit text-white "><i class="fa-solid fa-pen"></i> Edit</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end -->
+<div class="container py-4">
+    <h4 class="">ALL VICHLES</h4>
+    <table class="table shadow ">
+        <thead>
+            <tr class="text-center">
+                <th>#</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Driver</th>
+                <th>Driver ID</th>
+                <th>Assistant</th>
+                <th>Company ID</th>
+                <th></th>
+                <!-- <th>Helth State</th> -->
+            </tr>
+        </thead>
+        <Tbody>
+            <tr (clicck)="carInfo(car.id)" *ngFor="let car of cars|search:term " class="text-center">
+
+                <td>
+                    <input type="checkbox" class="form-check mt-2 ms-4 " />
+                </td>
+
+                <td>
+                    <p class="pt-2 name">{{car.name}}</p>
+                </td>
+                <td class="">
+                    <p class="mt-2 number">{{car.id}}</p>
+                </td>
+                <td class="">
+                    <p class="mt-2">Ahmed hamed mohamed</p>
+                </td>
+                <td>
+                    <p class="mt-2 number">{{car.driverID}}</p>
+                </td>
+                <td class="">
+                    <p class="mt-2">Ahmed hamed mohamed</p>
+                </td>
+                <td>
+                    <p class="mt-2 number">{{car.compID}}</p>
+                </td>
+                <td class="arrow">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </td>
+                <!-- <td>
+                <div class="progress mt-2" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar " style="width: 70%">7</div>
+                  </div>
+            </td> -->
+            </tr>
+           
+    </table>
+</div>

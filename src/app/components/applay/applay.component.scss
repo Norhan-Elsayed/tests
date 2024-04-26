@@ -1,0 +1,62 @@
+.main{
+    width: 100%;
+    min-height: 100vh ;
+    margin-top: 3rem !important;
+    // background-color: #01497c43;
+    // background-color: #F7F8F9;
+    
+}
+.applay-form{
+    width: 75%;
+    background-color: rgb(255, 255, 255) !important;
+    
+   
+}
+h2{
+    color:#226994;
+    font-family: 'Righteous', sans-serif !important;
+
+}
+.btn{
+    background-color: #226994 !important;
+}
+.bbttnn{
+    background-color: rgba(249, 248, 248, 0.952) !important;
+    color: #000 !important;
+}
+textarea{
+    border: .5px solid #226994 !important;
+
+}
+input{
+    background-color: rgba(128, 128, 128, 0.066);
+    box-shadow: none !important;
+    border: none !important;
+    transition:all  .2s;
+   
+}
+input:focus{
+    border: 1px solid #226994 !important;
+
+}
+.form-select{
+    
+    background-color: #F8F9FA !important;
+}
+
+
+
+
+
+
+@media all and (max-width:575px){
+    .applay-form{
+        width: 96% !important;
+    }
+    input{
+        width: 100% !important;
+    }
+    label{
+        font-size: small !important;
+    }
+}

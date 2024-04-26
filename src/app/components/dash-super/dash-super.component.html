@@ -1,0 +1,267 @@
+<div class="bodyMain container-fluid ps-2">
+    <div class="row">
+      <!-- aside -->
+      <div class="col-md-2">
+        <aside class="d-flex flex-column justify-content-between vh-100">
+          <!-- <div class="top bg-info">
+            <div class="logo ps-3">
+              <h2>The Seven<span class="text-danger">th</span></h2>
+            </div>
+            <div class="close" id="clossBtn">
+              <i class="fa-solid fa-xmark "></i>
+            </div>
+          </div> -->
+  
+          <!-- <button class="alert alert-danger" (click)="printCookieValue()">Print Cookie Value</button> -->
+  
+          <div class="sidebar">
+            <a href="" routerLink="/superInfo">
+              <span class="d-flex align-items-center"><i class="fa-solid fa-grip"></i>
+                <h3 class="">Personal Data</h3>
+              </span>
+            </a>
+            <!-- <a href="">
+              <span class="d-flex align-items-center">
+                <i class="fa-regular fa-id-card"></i>
+                <h3>Drivers</h3>
+              </span>
+            </a> -->
+            <!-- <a href="" class="active">
+              <span><i class="fa-solid fa-file-invoice"></i>Orders</span>
+            </a> -->
+            <a href="">
+              <span class="d-flex align-items-center">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Analytics</h3>
+              </span>
+            </a>
+            <a href="">
+              <span class="d-flex align-items-center">
+                <i class="fa-solid fa-message"></i>
+                <h3>Messages</h3>
+              </span>
+            </a>
+            <a href="">
+              <span class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <h3>Reports</h3>
+              </span>
+            </a>
+            <a href="">
+              <span class="d-flex align-items-center">
+                <i class="fa-solid fa-gear"></i>
+                <h3>Settings</h3>
+              </span>
+            </a>
+            <a href="">
+              <span class="d-flex align-items-center">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Add...</h3>
+              </span>
+            </a>
+          </div>
+          <div class="out">
+            <a class="log" role="button">
+              <span class="d-flex mb-3 gap-3" (click)="signout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <h3>logOut</h3>
+              </span>
+            </a>
+          </div>
+        </aside>
+      </div>
+      <!-- main -->
+      <div class="col-md-7">
+        <main>
+          <div class="dashboard">
+            <h1 class="ms-4">Dashboard</h1>
+            <div class="date">
+              <input class="ps-3 pe-3" type="date">
+            </div>
+          </div>
+          <div class="insights">
+            <!-- drivers , assistant -->
+            <div class="row gap-3 justify-content-center mt-3">
+              <!-- drivers -->
+              <div class="col-md-5 pointer " routerLink="/managers">
+                <div class="drivers  bg-white p-3 rounded-5 divHeight">
+                  <span class="ms-3"><i class="fa-regular fa-id-card"></i></span>
+                  <div class="middle">
+                    <div class="left m-3">
+                      <h1>Managers</h1>
+                    </div>
+                    <div class="number">
+                      <!-- <span>200</span> -->
+                      <div class="progress-container">
+                        <div class="progress-circle"></div>
+                        <span class="progress-number">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- assistant -->
+              <div class="col-md-5 pointer" routerLink="/assistSuper">
+                <div class="assistants bg-white divHeight p-3 rounded-5">
+                  <span class="ms-3"><i class="fa-solid fa-handshake-angle"></i></span>
+                  <div class="middle">
+                    <div class="left m-3">
+                      <h1>Assistant</h1>
+                    </div>
+                    <!-- <div class="number">
+                      <span>5</span>
+                    </div> -->
+                    <div class="progress-container">
+                      <div class="progress-circle2"></div>
+                      <span class="progress-number">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- admins , cars -->
+            <div class="row gap-3 justify-content-center mt-3">
+              <!-- admins -->
+              <div class="col-md-5 pointer" routerLink="/adminsSuper">
+                <div class="admins divHeight bg-white p-3 rounded-5">
+                  <span class="ms-3"><i class="fa-solid fa-user-tie"></i></span>
+                  <div class="middle">
+                    <div class="left m-3">
+                      <h1>Admins</h1>
+                    </div>
+                    <!-- <div class="number">
+                      <span>3</span>
+                    </div> -->
+                    <div class="progress-container">
+                      <div class="progress-circle3"></div>
+                      <span class="progress-number">3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- cars-->
+              <div class="col-md-5 pointer" routerLink="/carsSuper">
+                <div class="cars divHeight bg-white p-3 rounded-5">
+                  <span class="ms-3"><i class="fa-solid fa-car"></i></span>
+                  <div class="middle">
+                    <div class="left m-3">
+                      <h1>Cars</h1>
+                    </div>
+                    <!-- <div class="number">
+                      <span>250</span>
+                    </div> -->
+                    <div class="progress-container">
+                      <div class="progress-circle4"></div>
+                      <span class="progress-number">250</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-5 pointer" routerLink="/driversSuper">
+                <div class="drivers  bg-white p-3 rounded-5 divHeight">
+                  <span class="ms-3"><i class="fa-regular fa-id-card"></i></span>
+                  <div class="middle">
+                    <div class="left m-3">
+                      <h1>Drivers</h1>
+                    </div>
+                    <div class="number">
+                      <!-- <span>200</span> -->
+                      <div class="progress-container">
+                        <div class="progress-circle"></div>
+                        <span class="progress-number">200</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- right-side -->
+      <div class="col-md-3 pe-3">
+        <div class="right">
+          <div class="top">
+            <button id="menu-btn">
+              <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="theme-toggler">
+              <span><i class="fa-solid fa-sun active"></i></span>
+              <span><i class="fa-solid fa-moon"></i></span>
+            </div>
+            <div class="profile">
+              <div class="info">
+                <p>Hey, <b>Anas</b></p>
+                <small class="text-muted">superAdmin</small>
+              </div>
+              <div class="profile-photo">
+                <img src="../../../assets/WhatsApp Image 2023-12-04 at 01.06.38_8a45f47a.jpg">
+              </div>
+            </div>
+          </div>
+          <!-- end of top -->
+          <div class="recent-requests">
+            <h2>Recent Requests</h2>
+            <div class="requests">
+              <div class="request">
+                <div class="profile-photo">
+                  <img src="../../../assets/WhatsApp Image 2023-12-04 at 01.06.38_8a45f47a.jpg">
+                </div>
+                <div class="message">
+                  <p><b>Soundarya Balasubramani
+                    </b>Lorem ipsum dolor sit.</p>
+                  <small class="text-muted">2 Minutes Ago</small>
+                </div>
+              </div>
+  
+              <div class="request">
+                <div class="profile-photo">
+                  <img src="../../../assets/WhatsApp Image 2023-12-04 at 01.06.38_8a45f47a.jpg">
+                </div>
+                <div class="message">
+                  <p><b>Ahmed Abdelmuti</b>Lorem ipsum dolor sit.</p>
+                  <small class="text-muted">2 Minutes Ago</small>
+                </div>
+              </div>
+  
+              <div class="request">
+                <div class="profile-photo">
+                  <img src="../../../assets/WhatsApp Image 2023-12-04 at 01.06.38_8a45f47a.jpg">
+                </div>
+                <div class="message">
+                  <p><b>Aya Ghonim</b>Lorem ipsum dolor sit.</p>
+                  <small class="text-muted">2 Minutes Ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feedbacks">
+            <h2 class="m-2">My Feedbacks</h2>
+            <div class="item1">
+              <p>"I'm proud to have you as part of our team. You're a valuable asset."</p>
+            </div>
+            <div class="item2">
+              <p>"Thank you for consistently exceeding expectations and demonstrating a commitment to safety."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- dashboard date -->
+  
+  </div>
+  

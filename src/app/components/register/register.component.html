@@ -1,0 +1,101 @@
+<div class="main">
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form [formGroup]="registerForm" >
+          <h1 class="create">Create Account</h1>
+          <span>use your email for registeration</span>
+          <div>
+            <label for="name"></label>
+            <input formControlName="name" id="name" type="text" placeholder="Your Name ..">
+            <div>
+              <div *ngIf="registerForm.get('name')?.errors && registerForm.get('name')?.touched " class="alert alert-danger">
+              <p *ngIf="registerForm.get('name')?.getError('Required')">NAME IS Required</p>
+              <p *ngIf="registerForm.get('name')?.getError('minlength')">NAME min length 3</p>
+              <p *ngIf="registerForm.get('name')?.getError('maxlength')">NAME max length 10</p>
+              </div>
+            </div>
+          </div>
+  
+          <div>
+            <label for="email"></label>
+            <input formControlName="email" id="email" type="mail" placeholder="Your Email ..">
+            <div>
+              <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched " class="alert alert-danger">
+              <p *ngIf="registerForm.get('email')?.getError('Required')">email IS Required</p>
+              <p *ngIf="registerForm.get('email')?.getError('email')">email inValid</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="password"></label>
+            <input id="password" formControlName="password" type="password" placeholder="Password ..">
+  
+            <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched " class="alert alert-danger">
+              <p *ngIf="registerForm.get('password')?.getError('Required')">password IS Required</p>
+              <p *ngIf="registerForm.get('password')?.getError('pattern')">invalid pattern</p>
+              </div>
+          </div>
+  
+          <div>
+            <label for="RePassword"></label>
+            <input formControlName="rePassword" type="password" placeholder="RePassword ..">
+  
+            <div *ngIf="registerForm.get('rePassword')?.errors && registerForm.get('rePassword')?.touched " class="alert alert-danger">
+              <p *ngIf="registerForm.get('rePassword')?.getError('required')">rePassword IS Required</p>
+              <p *ngIf="registerForm.get('rePassword')?.getError('mismatch')">misMatch</p>
+              </div>
+          </div>
+  
+          <div>
+            <label for="phone"></label>
+            <input id="phone" formControlName="phone" type="phone" placeholder="Your Phone ..">
+  
+            <div *ngIf="registerForm.get('phone')?.errors && registerForm.get('phone')?.touched " class="alert alert-danger">
+              <p *ngIf="registerForm.get('phone')?.getError('Required')">phone IS Required</p>
+              <p *ngIf="registerForm.get('phone')?.getError('pattern')">invalid pattern</p>
+              </div>
+          </div>
+          <button [disabled]="registerForm.invalid">
+            sign up <span *ngIf="isLoading"> <i class="fas fa-spin fa-spinner"></i></span>
+          </button>
+  
+          <p *ngIf="errMsg" class="alert alert-danger mx-auto p-1">{{errMsg}}</p>
+        </form>
+  
+  
+  
+      </div>
+  
+      <div class="form-container sign-up d-none">
+        <form action="">
+          <h1 class="signword">sign in</h1>
+  
+          <span class="p-2">or use your email password</span>
+          <input type="mail" placeholder="Your Email ..">
+          <input type="password" placeholder="Password ..">
+          <a href="#">Forget your password</a>
+          <button id="signIn">sign in</button>
+  
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-right  ">
+            <img src="../../../assets/WhatsApp Image 2023-12-03 at 8.29.01 AM.jpeg" width="80px" height="60px"
+              class="rounded-3" alt="">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="hidden" id="login" routerLink="/login">Sign In</button>
+          </div>
+        </div>
+        <div class="toggle-panel toggle-left text-white d-none ">
+          <img src="../../../assets/WhatsApp Image 2023-12-03 at 8.29.01 AM.jpeg" width="80px" height="60px"
+            class="rounded-3" alt="">
+          <h1 class="">Hello,friend!</h1>
+          <p class="fw-bold">Register with your personal details to use all of site features</p>
+          <button class="" id="login">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

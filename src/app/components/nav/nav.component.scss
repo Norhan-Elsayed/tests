@@ -1,0 +1,59 @@
+.logo{
+    // color:#4897CD !important;
+    // filter: invert(1);
+    animation: logoAni 2s ease forwards;
+    margin-left: 100px
+  }
+  
+  .navbar::after{
+    position: absolute;
+    content: '';
+    top: 69%;
+    transform: translateY(-50%);
+    left: 17px;
+    height: 5px;
+    width: 45%;
+    // background-color: #4897CD ;
+    background: linear-gradient(90deg ,#1B6492, transparent);
+    animation: logoAni 2s ease forwards;
+  }
+//   .navbar {
+//     background-color: #e9ecf3 !important;
+    
+//   }
+  .navbar::before{
+    position: absolute;
+    content: '';
+    top: 45%;
+    transform: translateY(-50%);
+    // left: 900px;
+    right: 10px;
+    height: 5px;
+    width: 46%;
+    // background-color: #4897CD ;
+    background: linear-gradient(-90deg , #1B6492 , transparent);
+    animation: logoAni 2s ease forwards;
+  }
+  
+  :root{
+    --primary-color:#e9ecf3;
+    --secondary-color:#212121;
+  }
+  @keyframes logoAni {
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+
+.h5{
+  position: relative;
+  z-index: 222 !important;
+  color: #0a476d;
+  background-color: #EFEFEF !important;
+}
+  

@@ -1,0 +1,62 @@
+<div class="main">
+    <div class="container" id="container">
+      <div class="form-container sign-in">
+        <form [formGroup]="loginForm" (ngSubmit)="handleForm()">
+          <!-- <form [formGroup]="loginForm"></form> -->
+          <h1 class="signword">sign in</h1>
+          <span class="p-2">or use your email password</span>
+          <div>
+            <!-- <label for="email"></label>
+              <input formControlName="email" id="email" type="text" placeholder="Your Email .."> -->
+            <label for="email"></label>
+            <input id="email" formControlName="email" type="email" placeholder="Your Email ..">
+            <div>
+              <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched " class="alert alert-danger">
+                <p *ngIf="loginForm.get('email')?.getError('Required')">email IS Required</p>
+                <p *ngIf="loginForm.get('email')?.getError('email')">email inValid</p>
+              </div>
+            </div>
+          </div>
+  
+          <div>
+            <!-- <label for="password"></label>
+              <input id="password" formControlName="password" type="password" placeholder="Password .."> -->
+            <label for="password"></label>
+            <input id="password" formControlName="password" type="password" placeholder="Password ..">
+            <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched "
+              class="alert alert-danger">
+              <p *ngIf="loginForm.get('password')?.getError('Required')">password IS Required</p>
+              <p *ngIf="loginForm.get('password')?.getError('pattern')">invalid pattern</p>
+            </div>
+          </div>
+          <a href="#">Forget your password</a>
+          <!-- <p *ngIf="errMsg" class="alert alert-danger mx-auto p-1">{{errMsg}}</p> -->
+  
+  
+          <button [disabled]="loginForm.invalid" id="signIn">
+            sign in
+            <span *ngIf="isLoading"> <i class="fas fa-spin fa-spinner"></i></span>
+          </button>
+          <p *ngIf="errMsg" class="alert alert-danger mx-auto p-1">{{errMsg}}</p>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left bg-info">
+            <img src="../../../assets/WhatsApp Image 2023-12-03 at 8.29.01 AM.jpeg" width="80px" height="60px"
+              class="rounded-3" alt="">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+        </div>
+        <div class="toggle-panel toggle-right text-white">
+          <img src="../../../assets/WhatsApp Image 2023-12-03 at 8.29.01 AM.jpeg" width="80px" height="60px"
+            class="rounded-3" alt="">
+          <h1 class="">Hello,friend!</h1>
+          <p class="fw-bold">Register with your personal details to use all of site features</p>
+          <button class="" id="login" routerLink="/register">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>

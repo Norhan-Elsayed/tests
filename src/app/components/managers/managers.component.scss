@@ -1,0 +1,192 @@
+.small {
+    color: rgb(136, 135, 135);
+}
+
+.box,
+.box2,
+.box3,
+.box4 {
+    position: relative;
+    height: 250px;
+    width: 100px;
+
+
+}
+
+.box svg,
+.box2 svg,
+.box3 svg,
+.box4 svg {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.box svg circle {
+    fill: transparent;
+    stroke: rgb(32, 185, 131);
+    stroke-width: 10;
+    stroke-dasharray: 220;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;
+    animation: stroke 5s steps(500)forwards;
+
+}
+
+.box2 svg circle {
+    fill: transparent;
+    stroke: rgb(181, 66, 104);
+    stroke-width: 10;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;
+    animation: stroke 5s steps(500)forwards;
+
+}
+
+.box3 svg circle {
+    fill: transparent;
+    stroke: rgb(27, 100, 146);
+    stroke-width: 10;
+    stroke-dasharray: 280;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;
+    animation: stroke 5s steps(500)forwards;
+
+}
+
+.box4 svg circle {
+    fill: transparent;
+    stroke: rgb(228, 202, 72);
+    stroke-width: 10;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;
+    animation: stroke 5s steps(500)forwards;
+
+}
+
+.box .counter,
+.box2 .counter,
+.box3 .counter,
+.box4 .counter {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50%;
+
+    text-align: center;
+
+
+}
+
+.box .counter span,
+.box2 .counter span,
+.box3 .counter span,
+.box4 .counter span {
+    font-size: 22px;
+    line-height: 50px;
+    color: black;
+    font-weight: bold;
+}
+
+@keyframes stroke {
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.add,
+.delete,
+.edit {
+    background-color: #3F51B5;
+}
+
+.progress-bar {
+    background-color: #495cc7;
+    font-weight: bold;
+ 
+}
+.progress{
+    height: 8px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:575px) {
+
+    // .btn{
+    // font-size: small;
+    // }
+    .search {
+        width: 80% !important;
+    }
+
+    .col-md-5 {
+        margin-top: 10px !important;
+
+    }
+
+    tr td {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .col-lg-3 {
+        width: 50% !important;
+    }
+
+    .col-md-5 .btn {
+        font-size: 11px !important;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .col-lg-3 {
+        width: 100% !important;
+
+
+    }
+
+}
+
+@media only screen and (max-width:375px) {
+    .col-lg-3 {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .col-lg-3 {
+        width: 100% !important;
+
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .col-lg-3 {
+        width: 100% !important;
+
+    }
+}
